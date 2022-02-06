@@ -19,8 +19,7 @@
                 "cześć", 
                 "witeczka", 
                 "siemanko"
-            ],
-            "context_set": ""
+            ]
         },
         {
             "tag": "goodbye",
@@ -35,8 +34,7 @@
                 "to narazie", 
                 "do usłyszenia", 
                 "do zobaczenia"
-            ],
-            "context_set": ""
+            ]
             },
         {
             "tag": "swear",
@@ -49,8 +47,7 @@
                 "proszę nie używaj takich słów", 
                 "wiesz, że nieładnie jest przeklinać",
                 "proszę nie mów tak do mnie"
-            ],
-            "context_set": ""
+            ]
             }
     ]
 }
