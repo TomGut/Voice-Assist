@@ -1,0 +1,56 @@
+{
+    "intents": [
+        {
+            "tag": "greeting",
+            "patterns": [
+                "cześć", 
+                "hej", 
+                "heloł", 
+                "hejo", 
+                "heja", 
+                "siema", 
+                "siemka", 
+                "siemanko", 
+                "joł", 
+                "witaj", 
+                "dzień dobry"
+            ],
+            "responses": [
+                "cześć", 
+                "witeczka", 
+                "siemanko"
+            ],
+            "context_set": ""
+        },
+        {
+            "tag": "goodbye",
+            "patterns": [
+                "nara", 
+                "papa", 
+                "do widzenia", 
+                "do zobaczenia", 
+                "żegnaj"
+            ],
+            "responses": [
+                "to narazie", 
+                "do usłyszenia", 
+                "do zobaczenia"
+            ],
+            "context_set": ""
+            },
+        {
+            "tag": "swear",
+            "patterns": [
+                "dupa", 
+                "spadaj", 
+                "spieprzaj"
+            ],
+            "responses": [
+                "proszę nie używaj takich słów", 
+                "wiesz, że nieładnie jest przeklinać",
+                "proszę nie mów tak do mnie"
+            ],
+            "context_set": ""
+            }
+    ]
+}
