@@ -1,7 +1,7 @@
 import os
 import random
 
-import playsound as ps
+from playsound import playsound
 import speech_recognition as sr
 from gtts import gTTS
 
@@ -24,11 +24,11 @@ class Assistant():
         return self._name
 
     def respond(self, sentence):
-        num = random.randint(0, 9)
+        num = random.randint(0, 5)
         response = self.gs(text=sentence, lang='pl')
-        file = str(num) + ".mp3"
+        file = str(num) + '.mp3'
         response.save(file)
-        ps(file, True)
+        playsound(file, True)
         os.remove(file)
 
     def listen(self) -> str:
