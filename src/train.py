@@ -1,8 +1,9 @@
 
 import json
 
-from nltk_tools import Nltk_Tools
 import numpy as np
+
+from nltk_tools import Nltk_Tools
 
 with open('intents/intents.json', 'r') as f:
     data = json.load(f)
@@ -37,5 +38,3 @@ for (pattern_sentence, tag) in xy:
 
 x_train = np.array(x_train)
 y_train = np.array(y_train)
-
-
