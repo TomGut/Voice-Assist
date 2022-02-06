@@ -2,23 +2,17 @@ import nltk
 # nltk.download('punkt')
 from nltk.stem.porter import PorterStemmer
 
-stemmer = PorterStemmer()
+_stemmer = PorterStemmer()
+
+class Nltk_Tools():
+
+    def tokenize(self, sentence):
+        return nltk.word_tokenize(sentence)
 
 
-def tokenize(sentence):
-    return nltk.word_tokenize(sentence)
+    def stem(self, word):
+        return _stemmer.stem(word.lower())
 
 
-def stem(word):
-    return stemmer.stem(word.lower())
-
-
-def bag_of_words(tokenized_sentence, all_words):
-    pass
-
-
-a = 'do widzenia'
-print(a)
-
-a = tokenize(a)
-print(a)
+    def bag_of_words(self, tokenized_sentence, all_words):
+        pass
