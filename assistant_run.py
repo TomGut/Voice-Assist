@@ -73,6 +73,8 @@ if __name__ == "__main__":
                         bot.respond(ts.get_week_number())
                     if tag == "who_are_you":
                         bot.respond(bot.get_name())
+                    if tag == "goodbye":
+                        break
 
         else:
             bot.respond("Nie zrozumiałem")
