@@ -55,15 +55,15 @@
         {
             "tag": "who_are_you",
             "patterns": [
-                "kim jesteś",
                 "czym jesteś",
+                "kim jesteś",
+                "jak się nazywasz",
                 "jak masz na imię",
-                "jak się nazywasz"
+                "jak się zwiesz"
             ],
             "responses": [
-                "Jestem asystentem botem i nazywam się",
-                "Jestem",
-                "Nazywam się"
+                "jestem",
+                "jestem twoim asystentem i mam na imię"
             ]
         },
         {
@@ -140,6 +140,17 @@
             ]
         },
         {
+            "tag": "week",
+            "patterns": [
+                "jaki dziś tydzień",
+                "który tydzień roku mamy"
+            ],
+            "responses": [
+                "jest tydzień numer",
+                "teraz jest roku numer"
+            ]
+        },
+        {
             "tag": "agree",
             "patterns": [
                 "ok",
@@ -158,17 +169,6 @@
                 "no to ołkiej",
                 "cieszę się, że ok",
                 "proszę bardzo"
-            ]
-        },
-        {
-            "tag": "week",
-            "patterns": [
-                "jaki dziś tydzień",
-                "który tydzień roku mamy"
-            ],
-            "responses": [
-                "jest tydzień numer",
-                "teraz jest roku numer"
             ]
         }
     ]

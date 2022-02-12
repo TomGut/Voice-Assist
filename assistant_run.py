@@ -40,7 +40,8 @@ if __name__ == "__main__":
     WAKE = bot.get_name()
     bot.respond("Możesz mówić")
 
-    while True:
+    loop_last = True
+    while loop_last:
         command = bot.listen().lower()
 
         if "wyjście" in command:
@@ -60,8 +61,9 @@ if __name__ == "__main__":
 
         probs = torch.softmax(output, dim=1)
         prob = probs[0][predicted.item()]
+        print("prob", prob.item())
 
-        if prob.item() > 0.80:
+        if prob.item() > 0.75:
             for intent in intents["intents"]:
                 if tag == intent["tag"]:
                     bot.respond(random.choice(intent["responses"]))
@@ -74,7 +76,6 @@ if __name__ == "__main__":
                     if tag == "who_are_you":
                         bot.respond(bot.get_name())
                     if tag == "goodbye":
-                        break
-
+                        loop_last = False
         else:
-            bot.respond("Nie zrozumiałem")
+            bot.respond("Nie rozumiem")
