@@ -38,6 +38,5 @@ class Assistant():
             try:
                 phrase = self.sr.recognize_google(audio, language="pl-PL")
             except:
-                pass
+                print('error')
         return phrase
-

@@ -1,6 +1,4 @@
-
 import json
-import random
 
 import numpy as np
 import torch
@@ -10,7 +8,7 @@ from torch.utils.data import DataLoader, Dataset
 from model import Neural_Model
 from nltk_tools import Nltk_Tools
 
-with open('intents/intents.json', 'r') as f:
+with open("intents/intents.json", "r") as f:
     data = json.load(f)
 
 all_words = []
@@ -18,16 +16,16 @@ tags = []
 xy = []
 nl = Nltk_Tools()
 
-for intent in data['intents']:
-    tag = intent['tag']
+for intent in data["intents"]:
+    tag = intent["tag"]
     tags.append(tag)
 
-    for pattern in intent['patterns']:
+    for pattern in intent["patterns"]:
         word = nl.tokenize(pattern)
         all_words.extend(word)
         xy.append((word, tag))
 
-ignore_words = ['?', '!', ".", ","]
+ignore_words = ["?", "!", ".", ","]
 all_words = [nl.stem(w) for w in all_words if w not in ignore_words]
 all_words = sorted(set(all_words))
 tags = sorted(set(tags))
@@ -59,9 +57,9 @@ class Chat_Dataset(Dataset):
 
 
 dataset = Chat_Dataset()
-train_loader = DataLoader(dataset=dataset, batch_size=8,
-                          shuffle=True, num_workers=2)
-
+train_loader = DataLoader(
+    dataset=dataset, batch_size=8, shuffle=True, num_workers=2
+)
 
 hidden_size = 8
 output_size = len(tags)
@@ -69,7 +67,7 @@ input_size = len(x_train[0])
 learning_rate = 0.001
 epoch_num = 1000
 
-device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = Neural_Model(input_size, hidden_size, output_size).to(device)
 
 # Loss and optimizer
@@ -78,7 +76,7 @@ opt = torch.optim.Adam(model.parameters(), lr=learning_rate)
 
 # Training loop
 for epoch in range(epoch_num):
-    for(words, labels) in train_loader:
+    for (words, labels) in train_loader:
         words = words.to(device, dtype=torch.float)
         labels = labels.to(device)
 
@@ -92,9 +90,9 @@ for epoch in range(epoch_num):
         opt.step()
 
     if (epoch + 1) % 100 == 0:
-        print(f'epoch {epoch+1}/{epoch_num}, loss={loss.item():.4f}')
+        print(f"epoch {epoch+1}/{epoch_num}, loss={loss.item():.4f}")
 
-print(f'final loss, loss={loss.item():.4f}')
+print(f"final loss, loss={loss.item():.4f}")
 
 # Save trained model
 data = {
@@ -103,8 +101,8 @@ data = {
     "output_size": output_size,
     "hidden_size": hidden_size,
     "all_words": all_words,
-    "tags": tags
+    "tags": tags,
 }
 
-FILE = 'data.pth'
+FILE = "data.pth"
 torch.save(data, FILE)
