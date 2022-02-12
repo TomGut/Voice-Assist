@@ -77,8 +77,9 @@
             "tag": "oh",
             "patterns": [
                 "aha",
+                "ahaa",
+                "nie rozumiem",
                 "eee",
-                "rozumiem",
                 "kumam"
             ],
             "responses": [
@@ -112,7 +113,17 @@
             ],
             "responses": [
                 "jestem",
-                "jestem twoim asystentem i mam na imię"
+                "jestem twoim asystentem i nazywam się"
+            ]
+        },
+        {
+            "tag": "age",
+            "patterns": [
+                "ile masz lat"
+            ],
+            "responses": [
+                "mam dwa miliordy pięcet lat bez kozery mówiąc",
+                "młody szczyl ze mnie w sumie szkoda gadać"
             ]
         },
         {
@@ -150,11 +161,13 @@
                 "kim jest ewa",
                 "co myślisz o ewie",
                 "co myślisz o ewci",
-                "co myślisz o ewiszonie"
+                "co myślisz o ewiszonie",
+                "co myślisz o michale",
+                "kim jest michał"
             ],
             "responses": [
                 "mały gilus ale i tak ją lubię",
-                "smarkata i pystkata ale sympatyczna..chyba",
+                "smarkata i pyskata ale sympatyczna..chyba",
                 "lubię z nią gadać ale jak nic nie mówi",
                 "taka jedna co się ty plynta cały czas"
             ]
@@ -170,7 +183,7 @@
                 "to podaj mi czas"
             ],
             "responses": [
-                "teraz jest"
+                "jest"
             ]
         },
         {
@@ -197,27 +210,6 @@
             "responses": [
                 "jest tydzień numer",
                 "teraz jest roku numer"
-            ]
-        },
-        {
-            "tag": "agree",
-            "patterns": [
-                "ok",
-                "okej",
-                "oki",
-                "no ok",
-                "w porządku",
-                "niech ci będzie",
-                "no dobra",
-                "no dobrze",
-                "dzięki",
-                "dziękuję",
-                "dzięks"
-            ],
-            "responses": [
-                "proszę",
-                "proszę bardzo",
-                "no okej"
             ]
         }
     ]

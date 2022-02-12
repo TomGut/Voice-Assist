@@ -60,7 +60,7 @@ if __name__ == "__main__":
         # For testing.
         print("prob", prob.item())
 
-        if prob.item() > 0.75:
+        if prob.item() > 0.85:
             for intent in intents["intents"]:
                 if tag == intent["tag"]:
                     bot.respond(random.choice(intent["responses"]))
