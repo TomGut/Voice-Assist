@@ -61,7 +61,9 @@
                 "jak się nazywasz"
             ],
             "responses": [
-                "Jestem asystentem botem i nazywam się Janek"
+                "Jestem asystentem botem i nazywam się",
+                "Jestem",
+                "Nazywam się"
             ]
         },
         {
@@ -138,9 +140,11 @@
             ]
         },
         {
-            "tag": "ok",
+            "tag": "agree",
             "patterns": [
                 "ok",
+                "okej",
+                "oki",
                 "no ok",
                 "w porządku",
                 "niech ci będzie",
@@ -148,8 +152,8 @@
                 "no dobrze"
             ],
             "responses": [
-                "ołkiej",
-                "cieszę się"
+                "no to ołkiej",
+                "cieszę się, że ok"
             ]
         },
         {

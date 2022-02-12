@@ -32,19 +32,19 @@ if __name__ == "__main__":
     model.load_state_dict(model_state)
     model.eval()
 
-    bot = Assistant()
+    bot = Assistant("Janek")
     nt = Nltk_Tools()
     ts = Time_Skill()
 
     command = ""
     WAKE = bot.get_name()
-    bot.respond("Cześć, słucham...")
+    bot.respond("Możesz mówić")
 
     while True:
         command = bot.listen().lower()
 
         if "wyjście" in command:
-            bot.respond("Narazisko")
+            bot.respond("Do widzenia")
             break
 
         command = nt.tokenize(command)
@@ -71,6 +71,8 @@ if __name__ == "__main__":
                         bot.respond(ts.get_date())
                     if tag == "week":
                         bot.respond(ts.get_week_number())
+                    if tag == "who_are_you":
+                        bot.respond(bot.get_name())
 
         else:
             bot.respond("Nie zrozumiałem")
