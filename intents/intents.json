@@ -3,51 +3,94 @@
         {
             "tag": "greeting",
             "patterns": [
-                "cześć", 
-                "hej", 
-                "heloł", 
-                "hejo", 
-                "heja", 
-                "siema", 
-                "siemka", 
-                "siemanko", 
-                "joł", 
-                "witaj", 
+                "cześć",
+                "hej",
+                "heloł",
+                "hejo",
+                "heja",
+                "siema",
+                "siemka",
+                "siemanko",
+                "joł",
+                "witaj",
                 "dzień dobry"
             ],
             "responses": [
-                "cześć", 
-                "witeczka", 
+                "cześć",
+                "witeczka",
                 "siemanko"
             ]
         },
         {
             "tag": "goodbye",
             "patterns": [
-                "nara", 
-                "papa", 
-                "do widzenia", 
-                "do zobaczenia", 
+                "nara",
+                "narka",
+                "narazie",
+                "idę sobie",
+                "papa",
+                "do widzenia",
+                "do zobaczenia",
                 "żegnaj"
             ],
             "responses": [
-                "to narazie", 
-                "do usłyszenia", 
+                "to narazie",
+                "do usłyszenia",
                 "do zobaczenia"
             ]
-            },
+        },
         {
             "tag": "swear",
             "patterns": [
-                "dupa", 
-                "spadaj", 
-                "spieprzaj"
+                "dupa",
+                "spadaj",
+                "głupi",
+                "głupek",
+                "głupol",
+                "gnojek",
+                "idiota",
+                "nubie",
+                "nubku"
             ],
             "responses": [
-                "proszę nie używaj takich słów", 
+                "proszę nie używaj takich słów",
                 "wiesz, że nieładnie jest przeklinać",
                 "proszę nie mów tak do mnie"
             ]
-            }
+        },
+        {
+            "tag": "cild",
+            "patterns": [
+                "mania",
+                "mańka",
+                "mariano",
+                "marysia",
+                "marysi",
+                "ewa",
+                "ewie",
+                "ewcia",
+                "ewik",
+                "ewiszon"
+            ],
+            "responses": [
+                "mały gilus ale ją lubię",
+                "smarkata i pystkata ale sympatyczna..chyba",
+                "lubię z nią gadać jak nic nie mówi"
+            ]
+        },
+        {
+            "tag": "hour",
+            "patterns": [
+                "godzina",
+                "którą mamy godzinę",
+                "jaki jest czas",
+                "jak stoimy z czasem"
+            ],
+            "responses": [
+                "mamy teraz",
+                "jest",
+                "teraz jest"
+            ]
+        }
     ]
 }
