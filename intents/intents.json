@@ -40,56 +40,127 @@
             ]
         },
         {
+            "tag": "capability",
+            "patterns": [
+                "co umiesz",
+                "co potrafisz",
+                "w czym możesz mi pomóc",
+                "jak możesz mi pomóc",
+                "pomóż mi"
+            ],
+            "responses": [
+                "mogę podać ci godzinę, datę, ładnie się przywitać, pożegnać i powiedzieć ci jak mam na imię"
+            ]
+        },
+        {
+            "tag": "who_are_you",
+            "patterns": [
+                "kim jesteś",
+                "czym jesteś",
+                "jak masz na imię",
+                "jak się nazywasz"
+            ],
+            "responses": [
+                "Jestem asystentem botem i nazywam się Janek"
+            ]
+        },
+        {
             "tag": "swear",
             "patterns": [
+                "jesteś dupa",
                 "dupa",
                 "spadaj",
-                "głupi",
-                "głupek",
-                "głupol",
+                "jesteś głupi",
+                "jesteś głupek",
+                "ty głupku",
+                "ty głupolu",
                 "gnojek",
+                "ty gnojku",
+                "ty gnoju",
                 "idiota",
-                "nubie",
-                "nubku"
+                "ty nubie",
+                "ty nubku"
             ],
             "responses": [
                 "proszę nie używaj takich słów",
                 "wiesz, że nieładnie jest przeklinać",
-                "proszę nie mów tak do mnie"
+                "proszę nie mów tak do mnie",
+                "kto się przezywa sam się tak nazywa"
             ]
         },
         {
-            "tag": "cild",
+            "tag": "child",
             "patterns": [
-                "mania",
-                "mańka",
-                "mariano",
-                "marysia",
-                "marysi",
-                "ewa",
-                "ewie",
-                "ewcia",
-                "ewik",
-                "ewiszon"
+                "co myślisz o mani",
+                "co myślisz o mańce",
+                "kim jest mariano",
+                "co myślisz o marysi",
+                "kim jest marysia",
+                "kim jest ewa",
+                "co myślisz o ewie",
+                "co myślisz o ewci",
+                "co myślisz o ewiszonie"
             ],
             "responses": [
-                "mały gilus ale ją lubię",
+                "mały gilus ale i tak ją lubię",
                 "smarkata i pystkata ale sympatyczna..chyba",
-                "lubię z nią gadać jak nic nie mówi"
+                "lubię z nią gadać ale jak nic nie mówi",
+                "taka jedna co się ty plynta cały czas"
             ]
         },
         {
-            "tag": "hour",
+            "tag": "time",
             "patterns": [
-                "godzina",
+                "która godzina",
                 "którą mamy godzinę",
                 "jaki jest czas",
-                "jak stoimy z czasem"
+                "jak stoimy z czasem",
+                "to podaj mi godzinę",
+                "to podaj mi czas"
             ],
             "responses": [
-                "mamy teraz",
-                "jest",
                 "teraz jest"
+            ]
+        },
+        {
+            "tag": "date",
+            "patterns": [
+                "jaki mamy dzis dzień",
+                "jaki dziś dzień",
+                "jaka dziś data",
+                "data",
+                "to podaj mi dzisiejszą datę",
+                "to podaj datę"
+            ],
+            "responses": [
+                "dziś jest",
+                "mamy"
+            ]
+        },
+        {
+            "tag": "ok",
+            "patterns": [
+                "ok",
+                "no ok",
+                "w porządku",
+                "niech ci będzie",
+                "no dobra",
+                "no dobrze"
+            ],
+            "responses": [
+                "ołkiej",
+                "cieszę się"
+            ]
+        },
+        {
+            "tag": "week",
+            "patterns": [
+                "jaki dziś tydzień",
+                "który tydzień roku mamy"
+            ],
+            "responses": [
+                "jest tydzień numer",
+                "teraz jest roku numer"
             ]
         }
     ]

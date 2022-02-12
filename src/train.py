@@ -70,11 +70,11 @@ epoch_num = 1000
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model = Neural_Model(input_size, hidden_size, output_size).to(device)
 
-# Loss and optimizer
+# Loss and optimizer.
 crit = nn.CrossEntropyLoss()
 opt = torch.optim.Adam(model.parameters(), lr=learning_rate)
 
-# Training loop
+# Training loop.
 for epoch in range(epoch_num):
     for (words, labels) in train_loader:
         words = words.to(device, dtype=torch.float)
@@ -84,7 +84,7 @@ for epoch in range(epoch_num):
         outputs = model(words)
         loss = crit(outputs, labels)
 
-        # Backoward and optimizer step
+        # Backoward and optimizer step.
         opt.zero_grad()
         loss.backward()
         opt.step()
@@ -94,7 +94,7 @@ for epoch in range(epoch_num):
 
 print(f"final loss, loss={loss.item():.4f}")
 
-# Save trained model
+# Save trained model.
 data = {
     "model_state": model.state_dict(),
     "input_size": input_size,
@@ -104,5 +104,6 @@ data = {
     "tags": tags,
 }
 
+# Save model.
 FILE = "data.pth"
 torch.save(data, FILE)

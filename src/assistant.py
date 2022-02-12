@@ -6,9 +6,9 @@ import speech_recognition as sr
 from gtts import gTTS
 
 
-class Assistant():
+class Assistant:
 
-    _name = ''
+    _name = ""
 
     def __init__(self, name=None):
         self.sr = sr.Recognizer()
@@ -25,8 +25,8 @@ class Assistant():
 
     def respond(self, sentence):
         num = random.randint(0, 5)
-        response = self.gs(text=sentence, lang='pl')
-        file = str(num) + '.mp3'
+        response = self.gs(text=sentence, lang="pl")
+        file = str(num) + ".mp3"
         response.save(file)
         playsound(file, True)
         os.remove(file)
@@ -34,9 +34,12 @@ class Assistant():
     def listen(self) -> str:
         with self.mc as mic:
             audio = self.sr.listen(mic)
-            phrase = ''
+            phrase = ""
             try:
-                phrase = self.sr.recognize_google(audio, language="pl-PL")
+                phrase = self.sr.recognize_google(
+                    audio, language="pl-PL"
+                )
             except:
-                print('error')
+                print("Speech RC error")
+                pass
         return phrase

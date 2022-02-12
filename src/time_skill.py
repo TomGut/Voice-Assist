@@ -16,5 +16,5 @@ class Time_Skill:
         return week
 
     def get_time(self) -> str:
-        hour = self._today.strftime("%h")
+        hour = self._today.strftime("%X")
         return hour
