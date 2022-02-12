@@ -17,7 +17,6 @@
             ],
             "responses": [
                 "cześć",
-                "witeczka",
                 "siemanko"
             ]
         },
@@ -31,18 +30,68 @@
                 "papa",
                 "do widzenia",
                 "do zobaczenia",
-                "żegnaj"
+                "żegnaj",
+                "wyjście",
+                "koniec",
+                "już nie chcę rozmawiać",
+                "w sumie to nic",
+                "już nic"
             ],
             "responses": [
                 "to narazie",
                 "do usłyszenia",
-                "do zobaczenia"
+                "do zobaczenia",
+                "do widzenia"
+            ]
+        },
+        {
+            "tag": "whats_up",
+            "patterns": [
+                "co robisz",
+                "co słychać",
+                "co u ciebie",
+                "jak leci",
+                "jak tam"
+            ],
+            "responses": [
+                "a tak sobie siedzę i czekam co będziesz ode mnie potrzebować",
+                "a tak czekam co się będzie działo",
+                "a nic w sumie"
+            ]
+        },
+        {
+            "tag": "not_sure",
+            "patterns": [
+                "ale co mam mówić",
+                "co mam powiedzieć",
+                "o czym mamy rozmawiać",
+                "o czym możemy rozmawiać",
+                "o czym chcesz porozmawiać"
+            ],
+            "responses": [
+                "możesz mnie na przykład zapytać co mogę dla ciebie zrobić",
+                "możesz mnie na przykład zapytac co potrafię"
+            ]
+        },
+        {
+            "tag": "oh",
+            "patterns": [
+                "aha",
+                "eee",
+                "rozumiem",
+                "kumam"
+            ],
+            "responses": [
+                "nom, to co ci potrzeba",
+                "ano tak, to co ci potrzeba",
+                "no, to jak mogę ci pomóc"
             ]
         },
         {
             "tag": "capability",
             "patterns": [
                 "co umiesz",
+                "co możesz dla mnie zrobić",
                 "co potrafisz",
                 "w czym możesz mi pomóc",
                 "jak możesz mi pomóc",
@@ -166,9 +215,9 @@
                 "dzięks"
             ],
             "responses": [
-                "no to ołkiej",
-                "cieszę się, że ok",
-                "proszę bardzo"
+                "proszę",
+                "proszę bardzo",
+                "no okej"
             ]
         }
     ]

@@ -43,12 +43,8 @@ if __name__ == "__main__":
     loop_last = True
     while loop_last:
         command = bot.listen().lower()
-
-        if "wyjście" in command:
-            bot.respond("Do widzenia")
-            break
-
         command = nt.tokenize(command)
+
         X = nt.bag_of_words(command, all_words)
         X = X.reshape(1, X.shape[0])
         X = torch.from_numpy(X).to(device, dtype=torch.float)
@@ -61,6 +57,7 @@ if __name__ == "__main__":
 
         probs = torch.softmax(output, dim=1)
         prob = probs[0][predicted.item()]
+        # For testing.
         print("prob", prob.item())
 
         if prob.item() > 0.75:
