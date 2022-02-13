@@ -5,6 +5,10 @@ from playsound import playsound
 import speech_recognition as sr
 from gtts import gTTS
 
+# If problems with Ubuntu pyaudio installation
+# sudo apt-get install portaudio19-dev
+# pip install pyaudio
+
 
 class Assistant:
 
