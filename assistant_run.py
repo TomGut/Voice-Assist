@@ -32,7 +32,7 @@ if __name__ == "__main__":
     model.load_state_dict(model_state)
     model.eval()
 
-    bot = Assistant("Janek")
+    bot = Assistant("Zdzichu")
     nt = Nltk_Tools()
     ts = Time_Skill()
 
@@ -58,9 +58,9 @@ if __name__ == "__main__":
         probs = torch.softmax(output, dim=1)
         prob = probs[0][predicted.item()]
         # For testing.
-        print("prob", prob.item())
+        print("prob:", prob.item())
 
-        if prob.item() > 0.85:
+        if prob.item() > 0.80:
             for intent in intents["intents"]:
                 if tag == intent["tag"]:
                     bot.respond(random.choice(intent["responses"]))

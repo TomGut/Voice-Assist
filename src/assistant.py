@@ -18,7 +18,7 @@ class Assistant:
             self._name = name
 
         with self.mc as mic:
-            self.sr.adjust_for_ambient_noise(mic)
+            self.sr.adjust_for_ambient_noise(mic, 1)
 
     def get_name(self) -> str:
         return self._name
