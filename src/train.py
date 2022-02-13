@@ -9,14 +9,14 @@ from model import Neural_Model
 from nltk_tools import Nltk_Tools
 
 with open("intents/intents.json", "r") as f:
-    data = json.load(f)
+    intents = json.load(f)
 
 all_words = []
 tags = []
 xy = []
 nl = Nltk_Tools()
 
-for intent in data["intents"]:
+for intent in intents["intents"]:
     tag = intent["tag"]
     tags.append(tag)
 
