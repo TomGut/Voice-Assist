@@ -129,6 +129,29 @@
             ]
         },
         {
+            "tag": "thank_you",
+            "patterns": [
+                "dzięki",
+                "dziękuję"
+            ],
+            "responses": [
+                "proszę bardzo - czy mogę ci jeszcze jakoś pomóc",
+                "ależ proszę - w czym mogę jeszcze pomóc"
+            ]
+        },
+        {
+            "tag": "weather",
+            "patterns": [
+                "jaka będzie dziś pogoda",
+                "jaka jest pogoda",
+                "czy będzie dziś padało",
+                "czy będzie dziś słońce"
+            ],
+            "responses": [
+                "pogoda na dziś"
+            ]
+        },
+        {
             "tag": "swear",
             "patterns": [
                 "jesteś dupa",
