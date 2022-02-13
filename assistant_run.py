@@ -7,6 +7,7 @@ from src.assistant import Assistant
 from src.model import Neural_Model
 from src.nltk_tools import Nltk_Tools
 from src.time_skill import Time_Skill
+from src.weather_skill import Weather_Skill
 
 if __name__ == "__main__":
     device = torch.device(
@@ -60,7 +61,7 @@ if __name__ == "__main__":
         # For testing.
         print("prob:", prob.item())
 
-        if prob.item() > 0.80:
+        if prob.item() > 0.75:
             for intent in intents["intents"]:
                 if tag == intent["tag"]:
                     bot.respond(random.choice(intent["responses"]))
@@ -72,6 +73,15 @@ if __name__ == "__main__":
                         bot.respond(ts.get_week_number())
                     if tag == "who_are_you":
                         bot.respond(bot.get_name())
+                    if tag == "weather":
+                        weather = Weather_Skill()
+                        bot.respond(
+                            "temperatura"
+                            + weather.temp()
+                            + " stopni celsjusza"
+                            + "a słońce wzejdzie o "
+                            + weather.sun_rise()
+                        )
                     if tag == "goodbye":
                         loop_last = False
         else:
