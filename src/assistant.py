@@ -20,6 +20,8 @@ class Assistant:
         self.gs = gTTS
         if name is not None:
             self._name = name
+        else:
+            self._name = "Bot"
 
         with self.mc as mic:
             self.sr.adjust_for_ambient_noise(mic, 1)
