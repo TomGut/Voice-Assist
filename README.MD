@@ -12,6 +12,7 @@ Simple voice assistant app created in Python with PyTorch and Speech Recognition
 ## General info
 
 Communication with assistant by voice - speakers and mic needed.
+Googe Speech Recognition and Text to Speech used - network access needed for API calls.
 Assistant capabilities - intent based:
 
 * Greeting and goodbye
@@ -38,6 +39,8 @@ The project is created with:
 
 * python 3.8 or higher
 * pip for dependencies installation
+* OpenWeather API key - fell free to use provided or change for yours
+* network access for Google and Openweather API calls
 
 ### Install
 Highly recommended to establish virtual env before installation.
@@ -47,6 +50,14 @@ $ git clone https://github.com/TomGut/Voice-Assist.git
 $ pip install -r requirements.txt
 $ python assistant_run.py
 ```
+
+OpenWeather API key to get if needed:
+
+1. https://openweathermap.org/
+2. make account
+3. get your free API key
+
+
 
 ## Additional info
 
