@@ -1,6 +1,6 @@
 # AI Voice assistant
 
-Simple voice assistant app created in Python with PyTorch and Speech Recohnition.
+Simple voice assistant app created in Python with PyTorch and Speech Recognition.
 
 ## Table of contents
 
@@ -47,7 +47,7 @@ $ python assistant_run.py
 
 ```
 
-### Addidtional info
+## Addidtional info
 
 If any new records added into intents.json - model have to be trained again.
 In such case:
