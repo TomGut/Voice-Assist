@@ -32,15 +32,10 @@ The project is created with:
 * python 3.8 or higher
 * pip for dependencies installation
 
-## Recommended
-
-Installation and running in virtual enviroment
-
 ### Install
+Highly recommended to establish virtual env before installation.
 
 ```
-$ mkdir voice_bot
-$ cd voice_bot
 $ git clone https://github.com/TomGut/Voice-Assist.git
 $ pip install -r requirements.txt
 $ python assistant_run.py
