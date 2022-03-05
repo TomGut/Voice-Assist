@@ -47,7 +47,7 @@ $ python assistant_run.py
 
 ```
 
-## Addidtional info
+## Additional info
 
 If any new records added into intents.json - model have to be trained again.
 In such case:
