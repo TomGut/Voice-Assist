@@ -5,10 +5,6 @@ from playsound import playsound
 import speech_recognition as sr
 from gtts import gTTS
 
-# If problems with Ubuntu pyaudio installation
-# sudo apt-get install portaudio19-dev
-# pip install pyaudio
-
 
 class Assistant:
 
@@ -29,7 +25,7 @@ class Assistant:
     def get_name(self) -> str:
         return self._name
 
-    def respond(self, sentence):
+    def respond(self, sentence: str):
         num = random.randint(0, 5)
         response = self.gs(text=sentence, lang="pl")
         file = str(num) + ".mp3"
