@@ -12,7 +12,7 @@ Simple voice assistant app created in Python with PyTorch and Speech Recognition
 ## General info
 
 Communication with assistant by voice - speakers and mic needed.
-Linux only at the moment.
+Linux only at the moment. Polish language only.
 
 Assistant capabilities (intent based):
 
