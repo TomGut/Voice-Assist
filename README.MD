@@ -69,6 +69,13 @@ $ pip install -r requirements.txt
 $ python assistant_run.py
 ```
 
+If problems with pyaudio installation:
+
+```
+apt-get install portaudio19-dev
+pip install pyaudio
+```
+
 OpenWeather API key to get if needed:
 
 1. https://openweathermap.org/
