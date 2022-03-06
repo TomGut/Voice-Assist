@@ -6,9 +6,9 @@ Case study of machine learning.
 ## Table of contents
 
 * [General info](#general-info)
+* [Interaction with assistant](#interaction-with-assistant)
 * [Technologies](#technologies)
 * [Setup](#setup)
-* [Additional info](#additional-info)
 
 ## General info
 
@@ -25,6 +25,18 @@ Assistant capabilities (intent based):
 * date announcing
 * week no announcing
 * weather forecasting
+
+## Interaction with assistant
+
+When started - possible question can be found in intents.json at "patterns" tag.
+
+If any new positions or tags added into intents.json - model have to be trained again.
+In such case:
+
+```
+$ python train.py
+```
+
 
 ## Technologies
 
@@ -62,14 +74,3 @@ OpenWeather API key to get if needed:
 1. https://openweathermap.org/
 2. make account
 3. get your free API key and put it into weather_skill.py
-
-
-
-## Additional info
-
-If any new records added into intents.json - model have to be trained again.
-In such case:
-
-```
-$ python train.py
-```
