@@ -1,3 +1,10 @@
+"""
+Classification of words from user to match them to intents context by bag of 
+words method. Word classification makes possible to choose which intent the sentnce 
+belong to and match it with proper answer later on.
+"""
+
+
 from array import array
 import nltk
 import numpy as np
@@ -6,12 +13,14 @@ import numpy as np
 # nltk.download('punkt')
 from nltk.stem.porter import PorterStemmer
 
+
 _stemmer = PorterStemmer()
 
 
 class Nltk_Tools:
     def tokenize(self, sentence: str) -> str:
-        """Separation of sentence into smaller units (tokens) to be classifed
+        """
+        Separation of sentence into smaller units (tokens) to be classifed
         later on in bag of words.
 
         Args:
@@ -23,7 +32,8 @@ class Nltk_Tools:
         return nltk.word_tokenize(sentence)
 
     def stem(self, word: str) -> str:
-        """Extraction of word base - removing affixes at the end of word.
+        """
+        Extraction of word base - removing affixes at the end of word.
 
         Args:
             word (str): word to be stemmed.
@@ -36,7 +46,8 @@ class Nltk_Tools:
     def bag_of_words(
         self, tokenized_sentence: str, all_words: array
     ) -> array:
-        """Text Classification.
+        """
+        Text Classification.
         Take all the words in sentence, then count the number of occurrences
         of each word.
         After finding the number of occurrences of each word, we will choose
