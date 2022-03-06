@@ -12,8 +12,9 @@ Simple voice assistant app created in Python with PyTorch and Speech Recognition
 ## General info
 
 Communication with assistant by voice - speakers and mic needed.
-Googe Speech Recognition and Text to Speech used - network access needed for API calls.
-Assistant capabilities - intent based:
+Linux only at the moment.
+
+Assistant capabilities (intent based):
 
 * Greeting and goodbye
 * time annonucing
