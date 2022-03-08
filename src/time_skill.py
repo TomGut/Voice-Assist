@@ -12,14 +12,14 @@ class Time_Skill:
         locale.setlocale(locale.LC_ALL, "")
         self._today = datetime.today()
 
-    def get_date(self) -> Optional[datetime]:
+    def get_date(self) -> str:
         date = self._today.strftime("%A, %-d %B")
         return date
 
-    def get_week_number(self) -> Optional[datetime]:
+    def get_week_number(self) -> str:
         week = self._today.strftime("%-W")
         return week
 
-    def get_time(self) -> Optional[datetime]:
+    def get_time(self) -> str:
         hour = self._today.strftime("%X")
         return hour
