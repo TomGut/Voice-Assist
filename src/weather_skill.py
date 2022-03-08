@@ -6,7 +6,7 @@ from pyowm import OWM
 
 class Weather_Skill:
     # OpenWeather API key
-    api_key = "0157079c150cf168ae398e5a42481bbe"
+    api_key = "your OpenWeather API key here"
 
     def __init__(self, city=None):
         self.ow = OWM(self.api_key)
