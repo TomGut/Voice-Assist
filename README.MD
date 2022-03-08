@@ -56,7 +56,7 @@ Project created with:
 
 * python 3.8 or higher
 * pip for dependencies installation
-* OpenWeather API key - fell free to use provided or change for yours
+* OpenWeather API key - see Install section
 * network access for Google and Openweather API calls
 
 ### Install
