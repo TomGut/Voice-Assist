@@ -1,7 +1,8 @@
 import json
+import random
 
 import torch
-import random
+from pyowm.commons import exceptions as ex
 
 from src.assistant import Assistant
 from src.model import Neural_Model
@@ -74,14 +75,20 @@ if __name__ == "__main__":
                     if tag == "who_are_you":
                         bot.respond(bot.get_name())
                     if tag == "weather":
-                        weather = Weather_Skill()
-                        bot.respond(
-                            "temperatura"
-                            + weather.temp()
-                            + " stopni celsjusza"
-                            + "a słońce wzejdzie o "
-                            + weather.sun_rise()
-                        )
+                        try:
+                            weather = Weather_Skill()
+                            bot.respond(
+                                "temperatura"
+                                + weather.temp()
+                                + " stopni celsjusza"
+                                + "a słońce wzejdzie o "
+                                + weather.sun_rise()
+                            )
+                        # If OpenWeather API key not provided.
+                        except ex.UnauthorizedError:
+                            bot.respond(
+                                "Nie podałeś klucza OpenWeather API"
+                            )
                     if tag == "goodbye":
                         loop_last = False
         else:
