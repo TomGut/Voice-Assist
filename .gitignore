@@ -3,3 +3,4 @@ src/__pycache__/
 assist/
 *.mp3
 .vscode/
+tests/__pycache__
