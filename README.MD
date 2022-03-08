@@ -62,6 +62,8 @@ Project created with:
 ### Install
 Highly recommended to establish virtual env before installation.
 
+1. Install codebase:
+
 ```
 $ git clone https://github.com/TomGut/Voice-Assist.git
 $ cd Voice-Assist
@@ -76,8 +78,8 @@ apt-get install portaudio19-dev
 pip install pyaudio
 ```
 
-OpenWeather API key to get if needed:
+2. Get OpenWeather API key if want to have weather forecasting functionality:
 
-1. https://openweathermap.org/
-2. make account
-3. get your free API key and put it into weather_skill.py
+* https://openweathermap.org/
+* make an free account
+* get your free API key and put it into variable in weather_skill.py
