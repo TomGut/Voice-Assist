@@ -76,7 +76,9 @@ if __name__ == "__main__":
                         bot.respond(bot.get_name())
                     if tag == "weather":
                         try:
-                            weather = Weather_Skill()
+                            bot.respond("Podaj miasto")
+                            city = str(bot.listen().lower())
+                            weather = Weather_Skill(city)
                             bot.respond(
                                 "temperatura"
                                 + weather.temp()
