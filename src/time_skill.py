@@ -4,7 +4,6 @@ Functionality to provide date, time and week no.
 
 import locale
 from datetime import datetime
-from typing import Optional
 
 
 class Time_Skill:
