@@ -8,7 +8,7 @@ class Weather_Skill:
     # OpenWeather API key
     api_key = "your OpenWeather API key here"
 
-    def __init__(self, city=None):
+    def __init__(self, city=None) -> None:
         self.ow = OWM(self.api_key)
         self.mgr = self.ow.weather_manager()
         locator = Nominatim(user_agent="bot")
