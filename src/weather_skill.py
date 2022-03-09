@@ -1,3 +1,9 @@
+"""
+Functionality to provide weather forecasting with usage 
+of OpenWeather API (need to provide yours, else no forecast
+will be made).
+"""
+
 from datetime import datetime
 
 from geopy import Nominatim
@@ -13,18 +19,28 @@ class Weather_Skill:
         self.mgr = self.ow.weather_manager()
         locator = Nominatim(user_agent="bot")
 
+        # Possibilty to instantiate with None param.
         if city == None:
-            city = "Gdańsk"
+            self.city = "Gdańsk"
         else:
-            city = city
+            self.city = city
 
+        # Country needed for loc.
         country = ", PL"
-        loc = locator.geocode(city + country)
+        loc = locator.geocode(self.city + country)
         self.lat = loc.latitude
         self.lon = loc.longitude
         self.fore = self.mgr.one_call(lat=self.lat, lon=self.lon)
 
     def temp(self) -> str:
+        """
+        Provides temp in celsius grade.
+
+        forecats_daily[0] indicates present day.
+
+        Returns:
+            str: day midian temo packed into string.
+        """
         temp = (
             self.fore.forecast_daily[0]
             .temperature("celsius")
@@ -33,6 +49,15 @@ class Weather_Skill:
         return str(temp)
 
     def sun_rise(self) -> str:
+        """
+        Provides sun rise hour.
+
+        sun_rise - the [0] index in forecast_daily indicates
+        present day.
+
+        Returns:
+            str: sun rise hour packed into string.
+        """
         sun_rise = datetime.utcfromtimestamp(
             self.fore.forecast_daily[0].sunrise_time()
         ).strftime("%X")
