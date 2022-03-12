@@ -8,7 +8,7 @@ from datetime import datetime
 
 class Time_Skill:
     def __init__(self) -> None:
-        locale.setlocale(locale.LC_ALL, "")
+        self_locale = locale.setlocale(locale.LC_ALL, "")
         self._today = datetime.today()
 
     def get_date(self) -> str:
