@@ -13,7 +13,7 @@ class Time_Skill_Test(unittest.TestCase):
     def setUp(self) -> None:
         self.ts = Time_Skill()
 
-    def test_if_locale_was_set_to_default_in_init(self):
+    def test_if_locale_was_set_to_system_default_in_init(self):
         # 0 index provide country code
         self.assertIn(locale.getdefaultlocale()[0], self.ts._locale)
 
