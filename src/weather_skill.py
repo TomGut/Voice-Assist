@@ -4,15 +4,23 @@ of OpenWeather API (need to provide yours, else no forecast
 will be made).
 """
 
+import os
 from datetime import datetime
 
+from dotenv import load_dotenv
 from geopy import Nominatim
 from pyowm import OWM
 
 
 class Weather_Skill:
-    # OpenWeather API key
-    api_key = "your OpenWeather API key here"
+    """
+    OpenWeather API key keept private - loaded from enviromental variable.
+    Make .env file and put your API key at OPEN_WEATHER_APIKEY variable to
+    be loaded here.
+    """
+
+    load_dotenv()
+    api_key = os.getenv("OPEN_WEATHER_APIKEY")
 
     def __init__(self, city=None) -> None:
         self.ow = OWM(self.api_key)

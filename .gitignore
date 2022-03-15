@@ -4,3 +4,4 @@ assist/
 *.mp3
 .vscode/
 tests/__pycache__
+.env
