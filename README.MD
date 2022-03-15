@@ -83,3 +83,4 @@ pip install pyaudio
 * https://openweathermap.org/
 * make an free account
 * get your free API key and put it into variable in weather_skill.py
+* store your API key in .env at folder root with key: OPEN_WEATHER_APIKEY=your__openweather_api_key
