@@ -4,21 +4,21 @@ words method. Word classification makes possible to choose which intent the sent
 belong to and match it with proper answer later on.
 """
 
+from typing import Any, List
 
-from array import array
 import nltk
 import numpy as np
+import numpy.typing as npt
 
 # In case of missing Punkt Sentence Tokenizer uncomment line below.
 # nltk.download('punkt')
 from nltk.stem.porter import PorterStemmer
 
-
 _stemmer = PorterStemmer()
 
 
 class Nltk_Tools:
-    def tokenize(self, sentence: str) -> str:
+    def tokenize(self, sentence: str) -> List[str]:
         """
         Separation of sentence into smaller units (tokens) to be classifed
         later on in bag of words.
@@ -44,8 +44,8 @@ class Nltk_Tools:
         return _stemmer.stem(word.lower())
 
     def bag_of_words(
-        self, tokenized_sentence: str, all_words: array
-    ) -> array:
+        self, tokenized_sentence: str, all_words: List[str]
+    ) -> npt.NDArray[Any]:
         """
         Text Classification.
         Take all the words in sentence, then count the number of occurrences
