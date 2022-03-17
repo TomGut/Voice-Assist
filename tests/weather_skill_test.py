@@ -1,6 +1,6 @@
 import sys
 import unittest
-from unittest.mock import Mock
+from unittest.mock import patch
 
 sys.path.append("..")
 
@@ -8,8 +8,9 @@ from src.weather_skill import Weather_Skill
 
 
 class Weather_Skill_Test(unittest.TestCase):
-    def setUp(self) -> None:
-        self.ws = Weather_Skill()
+    @classmethod
+    def setUpClass(cls) -> None:
+        cls.ws = Weather_Skill()
 
     def test_city_name_gdansk_if_no_city_in_init(self):
         self.assertEqual(self.ws.city, "Gdańsk")
