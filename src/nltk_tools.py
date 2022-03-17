@@ -27,7 +27,7 @@ class Nltk_Tools:
             sentence (str): text to be tokenized
 
         Returns:
-            str: tokenized sentence
+            List[str]: tokenized sentence divided into single words
         """
         return nltk.word_tokenize(sentence)
 
@@ -58,14 +58,14 @@ class Nltk_Tools:
 
         Args:
             tokenized_sentence (str): tokenized words
-            all_words (array): all words to be put in the bag
+            all_words List[str]: all words to be put in the bag for classification
 
         Returns:
-            array: bag of words - numbers indicating if word exists in the
-            sentence - words classification (match to pattern in intents).
+            numpy array: list of floats indicating if word exists in the
+            sentence (1.0) or not (0) - words classification (match to pattern in intents).
         """
         tokenized_sentence = [self.stem(w) for w in tokenized_sentence]
-        bag = np.zeros(len(all_words), dtype=np.float)
+        bag = np.zeros(len(all_words), dtype=float)
         for idx, w in enumerate(all_words):
             if w in tokenized_sentence:
                 # Word classification in array to check if word shows in sentence.
