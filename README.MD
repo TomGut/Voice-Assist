@@ -45,7 +45,7 @@ Project created with:
 
 * python 3.8 or higher
 * pip for dependencies installation
-* OpenWeather API key - see Install section p.2
+* OpenWeather API key - see Install section
 * network access for Google and Openweather API calls
 
 ### Install
@@ -69,8 +69,8 @@ $ touch .env && echo OPEN_WEATHER_APIKEY=your__openweather_api_key_here > .env
 If problems with pyaudio installation:
 
 ```
-apt-get install portaudio19-dev
-pip install pyaudio
+$ apt-get install portaudio19-dev
+$ pip install pyaudio
 ```
 
 2. Get OpenWeather API key if want to have weather forecasting functionality:
