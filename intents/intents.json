@@ -234,7 +234,7 @@
             ],
             "responses": [
                 "jest tydzień numer",
-                "teraz jest roku numer"
+                "teraz jest tydzień roku numer"
             ]
         }
     ]
