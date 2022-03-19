@@ -6,9 +6,9 @@ Case study of machine learning.
 ## Table of contents
 
 * [General info](#general-info)
-* [Interaction with assistant](#interaction-with-assistant)
 * [Technologies](#technologies)
 * [Setup](#setup)
+* [Interaction with assistant](#interaction-with-assistant)
 
 ## General info
 
@@ -26,21 +26,10 @@ Assistant capabilities (intent based):
 * week no announcing
 * weather forecasting
 
-## Interaction with assistant
-
-When started - possible question can be found in intents.json at "patterns" tag.
-
-If any new positions or tags added into intents.json - model have to be trained again.
-In such case:
-
-```
-$ python train.py
-```
-
-
 ## Technologies
 
 Project created with:
+
 * Python 3.8.10 (noted problems wih < versions in cooperation with nltk)
 * Google SpeechRecognition 3.8.1
 * Googe Text to speech (gTTS) 2.2.3
@@ -56,7 +45,7 @@ Project created with:
 
 * python 3.8 or higher
 * pip for dependencies installation
-* OpenWeather API key - see Install section
+* OpenWeather API key - see Install section p.2
 * network access for Google and Openweather API calls
 
 ### Install
@@ -68,7 +57,13 @@ Highly recommended to establish virtual env before installation.
 $ git clone https://github.com/TomGut/Voice-Assist.git
 $ cd Voice-Assist
 $ pip install -r requirements.txt
-$ python assistant_run.py
+```
+
+Get your OpenWeather API key for weather forecasting functionality and
+store it into .env at repo root
+
+```
+$ touch .env && echo OPEN_WEATHER_APIKEY=your__openweather_api_key_here > .env
 ```
 
 If problems with pyaudio installation:
@@ -82,4 +77,22 @@ pip install pyaudio
 
 * https://openweathermap.org/
 * make an free account
-* store your API key in .env at folder root with key: OPEN_WEATHER_APIKEY=your__openweather_api_key
+* store your API key in .env at folder root with key: OPEN_WEATHER_APIKEY=your__openweather_api_key_here
+
+
+## Interaction with assistant
+
+When started - possible question can be found in intents.json at "patterns" tag.
+
+If any new positions or tags added into intents.json - model have to be trained again.
+In such case:
+
+```
+$ python train.py
+```
+
+To start assistant:
+
+```
+$ python assistant_run.py
+```
