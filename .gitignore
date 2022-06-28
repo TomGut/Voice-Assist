@@ -5,3 +5,4 @@ assist/
 .vscode/
 tests/__pycache__
 .env
+.vscode/settings.json
