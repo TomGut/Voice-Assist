@@ -1,7 +1,9 @@
-# AI Voice assistant
+<h1>AI Voice assistant</h1>
 
 Simple voice recognition assistant made in Python 3.8 with pytorch (for commands recognition and classification) and nltk - intent based responses.
 Case study of machine learning.
+
+It's a simple console app.
 
 ## Table of contents
 
