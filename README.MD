@@ -63,7 +63,9 @@ $ pip3 install -r requirements.txt
 ```
 
 Get your OpenWeather API key for weather forecasting functionality and
-store it into .env at repo root
+store it into .env at repo root (see .env-example for reference).
+<br>
+You can use bash command:
 
 ```
 $ touch .env && echo OPEN_WEATHER_APIKEY=your__openweather_api_key_here > .env
