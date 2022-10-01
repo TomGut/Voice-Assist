@@ -57,7 +57,7 @@ Highly recommended to establish virtual env before installation.
 1. Install codebase:
 
 ```
-$ git clone https://github.com/TomGut/Voice-Assist.git
+$ git clone https://github.com/forDeFan/Voice-Assist
 $ cd Voice-Assist
 $ pip3 install -r requirements.txt
 ```
