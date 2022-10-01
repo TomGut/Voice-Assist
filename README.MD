@@ -49,6 +49,7 @@ Project created with:
 * pip for dependencies installation
 * OpenWeather API key - see Install section
 * network access for Google and Openweather API calls
+* for now tested only on Linux, Windows version will follow shortly
 
 ### Install
 Highly recommended to establish virtual env before installation.
@@ -58,7 +59,7 @@ Highly recommended to establish virtual env before installation.
 ```
 $ git clone https://github.com/TomGut/Voice-Assist.git
 $ cd Voice-Assist
-$ pip install -r requirements.txt
+$ pip3 install -r requirements.txt
 ```
 
 Get your OpenWeather API key for weather forecasting functionality and
@@ -72,14 +73,14 @@ If problems with pyaudio installation:
 
 ```
 $ apt-get install portaudio19-dev
-$ pip install pyaudio
+$ pip3 install pyaudio
 ```
 
 2. Get OpenWeather API key if want to have weather forecasting functionality:
 
 * https://openweathermap.org/
 * make an free account
-* store your API key in .env at folder root with key: OPEN_WEATHER_APIKEY=your__openweather_api_key_here
+* store your API key in .env at folder root (see .env-example for reference).
 
 
 ## Interaction with assistant
@@ -90,11 +91,11 @@ If any new positions or tags added into intents.json - model have to be trained 
 In such case:
 
 ```
-$ python train.py
+$ python3 train.py
 ```
 
 To start assistant:
 
 ```
-$ python assistant_run.py
+$ python3 assistant_run.py
 ```
