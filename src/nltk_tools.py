@@ -11,7 +11,7 @@ import numpy as np
 import numpy.typing as npt
 
 # In case of missing Punkt Sentence Tokenizer uncomment line below.
-# nltk.download('punkt')
+nltk.download("punkt")
 from nltk.stem.porter import PorterStemmer
 
 _stemmer = PorterStemmer()
