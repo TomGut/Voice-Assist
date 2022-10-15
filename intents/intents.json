@@ -176,28 +176,6 @@
             ]
         },
         {
-            "tag": "child",
-            "patterns": [
-                "co myślisz o mani",
-                "co myślisz o mańce",
-                "kim jest mariano",
-                "co myślisz o marysi",
-                "kim jest marysia",
-                "kim jest ewa",
-                "co myślisz o ewie",
-                "co myślisz o ewci",
-                "co myślisz o ewiszonie",
-                "co myślisz o michale",
-                "kim jest michał"
-            ],
-            "responses": [
-                "mały gilus ale i tak ją lubię",
-                "smarkata i pyskata ale sympatyczna..chyba",
-                "lubię z nią gadać ale jak nic nie mówi",
-                "taka jedna co się ty plynta cały czas"
-            ]
-        },
-        {
             "tag": "time",
             "patterns": [
                 "która godzina",
