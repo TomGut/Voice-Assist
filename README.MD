@@ -3,6 +3,8 @@
 Simple voice recognition assistant made in Python 3.8 with pytorch (for commands recognition and classification) and nltk - intent based responses.
 Case study of machine learning.
 
+FOR NOW LINUX ONLY. Implementing setup tools shortly to get in work smoothly on Windows.
+
 It's a simple console app.
 
 ## Table of contents
@@ -32,13 +34,13 @@ Assistant capabilities (intent based):
 
 Project created with:
 
-* Python 3.8.10 (noted problems wih < versions in cooperation with nltk)
-* Google SpeechRecognition 3.8.1
-* Googe Text to speech (gTTS) 2.2.3
-* Playsound 1.3.0
-* PyAudio 0.2.11
-* PyTorch 1.10.2
-* nltk 3.6.7
+* Python 3.8.10 (noted problems lower versions in regard to cooperation with nltk)
+* Google SpeechRecognition
+* Googe Text to speech (gTTS) 
+* Playsound 
+* PyAudio 
+* PyTorch 
+* nltk 
 
 
 ## Setup
@@ -88,16 +90,20 @@ $ pip3 install pyaudio
 ## Interaction with assistant
 
 When started - possible question can be found in intents.json at "patterns" tag.
-
-If any new positions or tags added into intents.json - model have to be trained again.
-In such case:
-
-```
-$ python3 train.py
-```
+<br>
 
 To start assistant:
 
 ```
 $ python3 assistant_run.py
 ```
+
+If any new positions or tags added into intents.json - model have to be trained again.
+
+In such case:
+
+```
+$ cd Voice-Assist
+$ python3 src/train.py
+```
+
