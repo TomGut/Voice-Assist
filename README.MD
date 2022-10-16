@@ -64,8 +64,7 @@ $ cd Voice-Assist
 $ pip3 install -r requirements.txt
 ```
 
-Get your OpenWeather API key for weather forecasting functionality and
-store it into .env at repo root (see .env-example for reference).
+Not required but advised to get your OpenWeather API key for weather forecasting functionality and store it into .env at repo root (see .env-example for reference).
 <br>
 You can use bash command:
 
@@ -73,14 +72,14 @@ You can use bash command:
 $ touch .env && echo OPEN_WEATHER_APIKEY=your__openweather_api_key_here > .env
 ```
 
-If problems with pyaudio installation:
+If problems with pyaudio installation on Linux platform:
 
 ```
 $ apt-get install portaudio19-dev
 $ pip3 install pyaudio
 ```
 
-2. Get OpenWeather API key if want to have weather forecasting functionality:
+2. Getting the OpenWeather API key - to have operational weather forecasting functionality:
 
 * https://openweathermap.org/
 * make an free account
