@@ -14,6 +14,8 @@ pathspec==0.9.0
 platformdirs==2.5.0
 playsound==1.2.2
 PyAudio==0.2.11
+pycairo==1.21.0
+PyGObject==3.42.2
 pyowm==3.2.0
 PySocks==1.7.1
 python-dotenv==0.19.2
