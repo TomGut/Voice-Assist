@@ -3,9 +3,10 @@
 Simple voice recognition assistant made in Python 3.8 with pytorch (for commands recognition and classification) and nltk - intent based responses.
 Case study of machine learning.
 
-FOR NOW LINUX ONLY. Implementing setup tools shortly to get in work smoothly on Windows.
+This kind of robot/assistant (intent based, predefined question sets) can be used in commercial facilities like store, bank etc. - it respond on simple questions, in a FAQ a like manner.
 
-It's a simple console app.
+FOR NOW LINUX ONLY and polish language only. Implementing setup tools shortly to get in work smoothly on Windows.
+<br>
 
 ## Table of contents
 
@@ -88,7 +89,15 @@ $ pip3 install pyaudio
 
 ## Interaction with assistant
 
-When started - possible question can be found in intents.json at "patterns" tag.
+When started - possible fraze for questions that robot will recognize - can be found in intents.json at "patterns" tag.
+Examplionary questions that robot will recognize at the moment:
+
+* Jak się nazywasz ?
+* Co potrafisz ?
+* Jaki dziś dzień ?
+* Która godzina ?
+* Jaka będzie dziś pogoda ?
+
 <br>
 
 To start assistant:
