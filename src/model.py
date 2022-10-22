@@ -1,9 +1,3 @@
-"""
-Feed forward Neural Network model.
-Gives propability of matching to intent/ context to be used on answering.
-See description in: https://www.cs.toronto.edu/~lczhang/360/lec/w03/nn.html
-"""
-
 from typing import Optional
 
 import torch
@@ -12,6 +6,12 @@ from torch import Tensor
 
 
 class Neural_Model(nn.Module):
+    """
+    Feed forward Neural Network model.
+    Gives propability of matching to intent/ context to be used on answering.
+    See description in: https://www.cs.toronto.edu/~lczhang/360/lec/w03/nn.html
+    """
+
     def __init__(
         self, input_size: int, hidden_size: int, num_classes: int
     ) -> None:
