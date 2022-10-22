@@ -80,6 +80,10 @@ $ apt-get install portaudio19-dev
 $ pip3 install pyaudio
 ```
 
+## Tests
+
+Available in tests folder - still developing.
+
 2. Getting the OpenWeather API key - to have operational weather forecasting functionality:
 
 * https://openweathermap.org/
