@@ -65,7 +65,7 @@ $ cd Voice-Assist
 $ pip3 install -r requirements.txt
 ```
 
-Not required but advised to get your OpenWeather API key for weather forecasting functionality and store it into .env at repo root (see .env-example for reference).
+Not required but advised to set .env in project root and store your OpenWeather API key in it for weather forecasting functionality (see .env-example for reference).
 <br>
 You can use bash command:
 
