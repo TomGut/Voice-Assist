@@ -18,6 +18,7 @@ if __name__ == "__main__":
     with open("intents/intents.json", "r") as f:
         intents = json.load(f)
 
+    # Take trained model
     FILE = "data.pth"
     data = torch.load(FILE)
 
@@ -58,11 +59,11 @@ if __name__ == "__main__":
         print("predicted: ", tag)
 
         probs = torch.softmax(output, dim=1)
-        prob = probs[0][predicted.item()]
+        propability = probs[0][predicted.item()]
         # For testing.
-        print("prob:", prob.item())
+        print("propability:", propability.item())
 
-        if prob.item() > 0.75:
+        if propability.item() > 0.75:
             for intent in intents["intents"]:
                 if tag == intent["tag"]:
                     bot.respond(random.choice(intent["responses"]))
