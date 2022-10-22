@@ -1,9 +1,3 @@
-"""
-Classification of words from user to match them to intents context by bag of 
-words method. Word classification makes possible to choose which intent the sentnce 
-belong to and match it with proper answer later on.
-"""
-
 from typing import Any, List
 
 import nltk
@@ -18,6 +12,12 @@ _stemmer = PorterStemmer()
 
 
 class Nltk_Tools:
+    """
+    Classification of words from user to match them to intents context by bag of 
+    words method. Word classification makes possible to choose which intent the sentnce 
+    belong to and match it with proper answer later on.
+    """
+
     def tokenize(self, sentence: str) -> List[str]:
         """
         Separation of sentence into smaller units (tokens) to be classifed
