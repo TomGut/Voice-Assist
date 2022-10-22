@@ -7,6 +7,9 @@ from gtts import gTTS
 
 
 class Assistant:
+    """
+    Class for bot/assistant mian functionalities.
+    """
 
     _name = ""
 
@@ -23,6 +26,12 @@ class Assistant:
             self.sr.adjust_for_ambient_noise(mic, 1)
 
     def get_name(self) -> str:
+        """
+        Gets bot name set by user in instantiation
+
+        Returns:
+            str: bot name
+        """
         return self._name
 
     def respond(self, sentence: str):
@@ -34,6 +43,12 @@ class Assistant:
         os.remove(file)
 
     def listen(self) -> str:
+        """
+        Speech recognition functionality - transalte voice fraze into text fraze.
+
+        Returns:
+            str: stringified vocal fraze
+        """
         with self.mc as mic:
             audio = self.sr.listen(mic)
             phrase = ""
