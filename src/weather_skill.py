@@ -1,9 +1,3 @@
-"""
-Functionality to provide weather forecasting with usage 
-of OpenWeather API (need to provide yours, else no forecast
-will be made).
-"""
-
 import os
 from datetime import datetime
 
@@ -14,9 +8,8 @@ from pyowm import OWM
 
 class Weather_Skill:
     """
-    OpenWeather API key keept private - loaded from enviromental variable.
-    Make .env file and put your API key at OPEN_WEATHER_APIKEY variable to
-    be loaded here.
+    Functionality to provide weather forecasting with usage of OpenWeather API.
+    OpenWeather API key keept private - loaded from .env (see .env-example).
     """
 
     load_dotenv()
@@ -43,11 +36,10 @@ class Weather_Skill:
     def temp(self) -> str:
         """
         Provides temp in celsius grade.
-
         forecats_daily[0] indicates present day.
 
         Returns:
-            str: day midian temo packed into string.
+            str: day midian temp.
         """
         temp = (
             self.fore.forecast_daily[0]
@@ -59,12 +51,11 @@ class Weather_Skill:
     def sun_rise(self) -> str:
         """
         Provides sun rise hour.
-
         sun_rise - the [0] index in forecast_daily indicates
         present day.
 
         Returns:
-            str: sun rise hour packed into string.
+            str: sun rise hour.
         """
         sun_rise = datetime.utcfromtimestamp(
             self.fore.forecast_daily[0].sunrise_time()
