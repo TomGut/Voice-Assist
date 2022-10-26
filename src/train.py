@@ -5,8 +5,8 @@ import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader, Dataset
 
-from model import Neural_Model
-from nltk_tools import Nltk_Tools
+from model import NeuralModel
+from nltk_tools import NltkTools
 
 with open("intents/intents.json", "r") as f:
     intents = json.load(f)
@@ -14,7 +14,7 @@ with open("intents/intents.json", "r") as f:
 all_words = []
 tags = []
 xy = []
-nl = Nltk_Tools()
+nl = NltkTools()
 
 for intent in intents["intents"]:
     tag = intent["tag"]
@@ -43,7 +43,7 @@ x_train = np.array(x_train)
 y_train = np.array(y_train)
 
 
-class Chat_Dataset(Dataset):
+class ChatDataset(Dataset):
     def __init__(self) -> None:
         self.n_samples = len(x_train)
         self.x_data = x_train
@@ -56,7 +56,7 @@ class Chat_Dataset(Dataset):
         return self.n_samples
 
 
-dataset = Chat_Dataset()
+dataset = ChatDataset()
 train_loader = DataLoader(
     dataset=dataset, batch_size=8, shuffle=True, num_workers=2
 )
@@ -68,7 +68,7 @@ learning_rate = 0.001
 epoch_num = 1000
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-model = Neural_Model(input_size, hidden_size, output_size).to(device)
+model = NeuralModel(input_size, hidden_size, output_size).to(device)
 
 # Loss and optimizer.
 crit = nn.CrossEntropyLoss()

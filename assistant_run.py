@@ -5,10 +5,10 @@ import torch
 from pyowm.commons import exceptions as ex
 
 from src.assistant import Assistant
-from src.model import Neural_Model
-from src.nltk_tools import Nltk_Tools
-from src.time_skill import Time_Skill
-from src.weather_skill import Weather_Skill
+from src.model import NeuralModel
+from src.nltk_tools import NltkTools
+from src.time_skill import TimeSkill
+from src.weather_skill import WeatherSkill
 
 if __name__ == "__main__":
     device = torch.device(
@@ -29,15 +29,13 @@ if __name__ == "__main__":
     tags = data["tags"]
     model_state = data["model_state"]
 
-    model = Neural_Model(input_size, hidden_size, output_size).to(
-        device
-    )
+    model = NeuralModel(input_size, hidden_size, output_size).to(device)
     model.load_state_dict(model_state)
     model.eval()
 
     bot = Assistant("Zdzichu")
-    nt = Nltk_Tools()
-    ts = Time_Skill()
+    nt = NltkTools()
+    ts = TimeSkill()
 
     command = ""
     WAKE = bot.get_name()
@@ -79,7 +77,7 @@ if __name__ == "__main__":
                         try:
                             bot.respond("Podaj miasto")
                             city = str(bot.listen().lower())
-                            weather = Weather_Skill(city)
+                            weather = WeatherSkill(city)
                             bot.respond(
                                 "temperatura"
                                 + weather.temp()

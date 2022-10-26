@@ -2,7 +2,7 @@ import locale
 from datetime import datetime
 
 
-class Time_Skill:
+class TimeSkill:
     """ 
     Functionality to provide date, time and week no.
     """

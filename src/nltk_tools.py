@@ -11,7 +11,7 @@ from nltk.stem.porter import PorterStemmer
 _stemmer = PorterStemmer()
 
 
-class Nltk_Tools:
+class NltkTools:
     """
     Classification of words from user to match them to intents context by bag of 
     words method. Word classification makes possible to choose which intent the sentnce 
