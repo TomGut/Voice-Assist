@@ -65,32 +65,42 @@ if __name__ == "__main__":
             for intent in intents["intents"]:
                 if tag == intent["tag"]:
                     bot.respond(random.choice(intent["responses"]))
-                    if tag == "time":
-                        bot.respond(ts.get_time())
-                    if tag == "date":
-                        bot.respond(ts.get_date())
-                    if tag == "week":
-                        bot.respond(ts.get_week_number())
-                    if tag == "who_are_you":
-                        bot.respond(bot.get_name())
-                    if tag == "weather":
-                        try:
-                            bot.respond("Podaj miasto")
-                            city = str(bot.listen().lower())
-                            weather = WeatherSkill(city)
-                            bot.respond(
-                                "temperatura"
-                                + weather.temp()
-                                + " stopni celsjusza"
-                                + "a słońce wzejdzie o "
-                                + weather.sun_rise()
-                            )
-                        # If OpenWeather API key not provided.
-                        except ex.UnauthorizedError:
-                            bot.respond(
-                                "Nie podałeś klucza OpenWeather API"
-                            )
                     if tag == "goodbye":
                         loop_last = False
+                    else:
+                        if tag == "time":
+                            bot.respond(ts.get_time())
+                        if tag == "date":
+                            bot.respond(ts.get_date())
+                        if tag == "week":
+                            bot.respond(ts.get_week_number())
+                        if tag == "who_are_you":
+                            bot.respond(bot.get_name())
+                        if tag == "weather":
+                            try:
+                                bot.respond("Podaj miasto")
+                                city = str(bot.listen().lower())
+                                weather = WeatherSkill(city)
+                                if weather.temp() is not None:
+                                    bot.respond(
+                                        "temperatura"
+                                        + weather.temp()
+                                        + " stopni celsjusza"
+                                        + "a słońce wzejdzie o "
+                                        + weather.sun_rise()
+                                    )
+                                else:
+                                    # No API key in .env
+                                    bot.respond(
+                                        "Nie podałeś klucza OpenWeather API w zmiennej dotenv. Co robimy dalej ?"
+                                    )
+
+                            # If OpenWeather API wrong key provided.
+                            except ex.UnauthorizedError:
+                                bot.respond(
+                                    "Nieprawidłowy klucz OpenWeather API. Co robimy dalej ?"
+                                )
+
+                        bot.respond("Co chciałbyś jeszcze wiedzieć ?")
         else:
             bot.respond("Nie rozumiem")
