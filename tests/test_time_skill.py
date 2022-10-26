@@ -6,12 +6,12 @@ import unittest
 sys.path.append("..")
 
 
-from src.time_skill import Time_Skill
+from src.time_skill import TimeSkill
 
 
-class Time_Skill_Test(unittest.TestCase):
+class TimeSkillTest(unittest.TestCase):
     def setUp(self) -> None:
-        self.ts = Time_Skill()
+        self.ts = TimeSkill()
 
     def test_if_locale_was_set_to_system_default_in_init(self):
         # 0 index returns country code

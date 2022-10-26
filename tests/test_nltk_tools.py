@@ -1,15 +1,14 @@
+from src.nltk_tools import NltkTools
 import sys
 import unittest
 
 sys.path.append("..")
 
-from src.nltk_tools import Nltk_Tools
 
-
-class Nltk_Tools_Test(unittest.TestCase):
+class NltkToolsTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
-        cls.nl_tools = Nltk_Tools()
+        cls.nl_tools = NltkTools()
         cls.sentence = "test sentence"
         cls.bag = cls.nl_tools.bag_of_words(
             cls.nl_tools.tokenize(cls.sentence), ["test", "test", "tes"]
